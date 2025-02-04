@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="val">  </h1> <br>
+    <button>Add</button>
+    <button>Sub</button>
+    <button>Reset</button>
+    
+
+
+    <script>
+        let val = document.getElementById("val")
+        var i=0;
+        val.innerText= i
+
+        let button = document.getElementsByTagName("button")
+       
+        let Add = button[0]
+        Add.addEventListener('click' ,() => {
+            i++;
+            val.innerText= i
+        } );
+        
+        let Sub = button[1]
+        Sub.addEventListener('click' ,() => {
+            i--;
+            val.innerText= i
+        } );
+
+        let Reset = button[2]
+       
+        Reset.addEventListener('click' ,() => {
+            i=0;
+            val.innerText= i
+        } )
+
+
+    </script>
+</body>
+</html>

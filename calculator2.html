@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>CALCULATOR</h1>
+
+    <label for="val1">Val 1 : </label>
+    <input type="number" id="val1" name="val1" required> <br><br>
+
+    <label for="val2"> Val 2 :</label>
+    <input type="number" id="val2" name="val2" required><br><br>
+
+    <label for="#">Result :</label>
+    <input type="text" id="result"> <br /><br>
+
+    <button id="cal"> Add</button> <br><br><br>
+
+   
+
+
+<script>
+    var Result = 0 ;
+    let val1 = document.querySelector("#val1");
+    let val2 = document.querySelector("#val2");
+    let result = document.querySelector("#result");
+    const calc = document.querySelector("#cal");
+
+    
+    let button = document.getElementsByTagName("button")
+    
+    let Add = button[0]
+
+    Add.addEventListener("click", ()=>{
+        const value1 = val1.value;  
+        const value2 = val2.value;
+
+        const output = parseInt(value1) + parseInt(value2);
+        result.value=output;
+        console.log(`The output is ${output}`);
+    });
+    
+    
+</script>
+</body>
+</html>

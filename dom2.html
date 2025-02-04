@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Form Handling</title>
+</head>
+<body>
+    <h2>DOM Form Handling</h2>
+    <form id="userForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+        
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+        <br><br>
+        
+        <button type="submit">Submit</button>
+    </form>
+
+    <h3>Submitted Data:</h3>
+    <p id="output"></p>
+
+    <script>
+        // Step 3: Handling form submission using JavaScript
+        document.getElementById("userForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form from refreshing the page
+
+            // Step 4: Accessing input values
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let age = document.getElementById("age").value;
+
+            // Step 5: Displaying submitted data dynamically
+            document.getElementById("output").innerHTML = 
+                `<strong>Name:</strong> ${name} <br>
+                 <strong>Email:</strong> ${email} <br>
+                 <strong>Age:</strong> ${age}`;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        body {
+            background-color: rgb(75, 75, 88);
+            margin: 0;
+            padding: auto;
+
+
+        }
+
+        .calc {
+            width: 380px;
+            height: 400px;
+            background-color: rgb(12, 11, 11);
+            border-radius: 10px;
+            padding: 15px;
+
+        }
+
+        #Result {
+            background-color: rgb(166, 240, 81);
+            height: 55px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            text-align: end;
+            font-size: 25px;
+            font-weight: 900;
+            align-content: center;
+        }
+
+        button {
+            height: 57px;
+            width: 21.5%;
+            margin: 5px;
+            border-radius: 5px;
+            /* background-color: rgb(248, 242, 242); */
+            display: inline-block;
+            text-align: center;
+            font-size: 25px;
+            font-weight: 900;
+            align-content: center;
+        }
+
+        button:hover {
+            border: 3px solid rgb(142, 181, 219);
+            color: rgb(142, 181, 219);
+            background-color: bisque;
+        }
+
+        .num {
+            background-color: rgb(248, 242, 242);
+            display: inline-block;
+
+        }
+
+        .btn {
+            background-color: rgb(87, 26, 230);
+            display: inline-block;
+
+        }
+
+        #clere {
+            background-color: rgb(241, 29, 29);
+        }
+
+        #cal {
+            height: 190px;
+            max-width: 82px;
+            min-width: 81.69px;
+            background-color: rgb(75, 233, 83);
+            position: absolute;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="calc">
+
+        <div id="Result"> </div>
+        <button id="clere" class="btn">C</button>
+        <button id="Dev" class="btn">/</button>
+        <button id="Mul" class="btn">*</button>
+        <button id="Sub" class="btn">-</button>
+
+        <button id="num1" class="num">1</button>
+        <button id="num2" class="num">2</button>
+        <button id="num3" class="num">3</button>
+        <button id="Add" class="btn">+</button>
+        <button id="num4" class="num">4</button>
+        <button id="num5" class="num">5</button>
+        <button id="num6" class="num">6</button>
+        <button id="cal" class="btn">=</button>
+        <div style="background-color: black;" class="num">.</div>
+        <button id="num7" class="num">7</button>
+        <button id="num8" class="num">8</button>
+        <button id="num9" class="num">9</button>
+        <div style="background-color: black;" class="num">.</div>
+        <button id="num0" class="num">0</button>
+        <button id="num." class="num">.</button>
+    </div>
+
+
+
+
+    <script>
+        var Result = 0;
+        var val1 = 0;
+        var val2 = 0;
+        var op = 0;
+        var count = 0;
+        let output = document.getElementById("Result");
+
+        let num0 = document.getElementById("num0")
+        num0.addEventListener("click", () => {
+            if (count == 1) {
+                val2 = val2 * 10 + 0;
+                output.innerText = val2;
+                console.log(val2)
+            }
+            else {
+                val1 = val1 * 10 + 0;
+                output.innerText = val1;
+                console.log(val1)
+            }
+        });
+
+        let num1 = document.getElementById("num1")
+        num1.addEventListener("click", () => {
+            if (count == 1) {
+                val2 = val2 * 10 + 1;
+                output.innerText = val2;
+                console.log(val2)
+            }
+            else {
+                val1 = val1 * 10 + 1;
+                output.innerText = val1;
+                console.log(val1)
+            }
+        });
+
+        let num2 = document.getElementById("num2")
+        num2.addEventListener("click", () => {
+            if (count == 1) {
+                val2 = val2 * 10 + 2;
+                output.innerText = val2;
+                console.log(val2)
+            }
+            else {
+                val1 = val1 * 10 + 2;
+                output.innerText = val1;
+                console.log(val1)
+            }
+        });
+
+        let num3 = document.getElementById("num3")
+        num3.addEventListener("click", () => {
+            if (count == 1) {
+                val2 = val2 * 10 + 3;
+                output.innerText = val2;
+                console.log(val2)
+            }
+            else {
+                val1 = val1 * 10 + 3;
+                output.innerText = val1;
+                console.log(val1)
+            }
+        });
+        let num4 = document.getElementById("num4")
+        num4.addEventListener("click", () => {
+            if (count == 1) {
+                val2 = val2 * 10 + 4;
+                output.innerText = val2;
+                console.log(val2)
+            }
+            else {
+                val1 = val1 * 10 + 4;
+                output.innerText = val1;
+                console.log(val1)
+            }
+        });
+
+        let num5 = document.getElementById("num5")
+        num5.addEventListener("click", () => {
+            if (count == 1) {
+                val2 = val2 * 10 + 5;
+                output.innerText = val2;
+                console.log(val2)
+            }
+            else {
+                val1 = val1 * 10 + 5;
+                output.innerText = val1;
+                console.log(val1)
+            }
+        });
+
+        let num6 = document.getElementById("num6")
+        num6.addEventListener("click", () => {
+            if (count == 1) {
+                val2 = val2 * 10 + 6;
+                output.innerText = val2;
+                console.log(val2)
+            }
+            else {
+                val1 = val1 * 10 + 6;
+                output.innerText = val1;
+                console.log(val1)
+            }
+        });
+
+        let num7 = document.getElementById("num7")
+        num7.addEventListener("click", () => {
+            if (count == 1) {
+                val2 = val2 * 10 + 7;
+                output.innerText = val2;
+                console.log(val2)
+            }
+            else {
+                val1 = val1 * 10 + 7;
+                output.innerText = val1;
+                console.log(val1)
+            }
+        });
+
+        let num8 = document.getElementById("num8")
+        num8.addEventListener("click", () => {
+            if (count == 1) {
+                val2 = val2 * 10 + 8;
+                output.innerText = val2;
+                console.log(val2)
+            }
+            else {
+                val1 = val1 * 10 + 8;
+                output.innerText = val1;
+                console.log(val1)
+            }
+        });
+
+
+        let num9 = document.getElementById("num9")
+        num9.addEventListener("click", () => {
+            if (count == 1) {
+                val2 = val2 * 10 + 9;
+                output.innerText = val2;
+                console.log(val2)
+            }
+            else {
+                val1 = val1 * 10 + 9;
+                output.innerText = val1;
+                console.log(val1)
+            }
+        });
+
+        let Add = document.getElementById("Add")
+        Add.addEventListener("click", () => {
+            if (count == 1) {
+                alert("Only one Operator Allowed");
+            }
+            count = 1;
+            op = 1;
+            output.innerText = "+";
+            console.log("+")
+        });
+        let Sub = document.getElementById("Sub")
+        Sub.addEventListener("click", () => {
+            if (count == 1) {
+                alert("Only one Operator Allowed");
+            }
+            else {
+                count = 1;
+                op = 2;
+                output.innerText = "-";
+                console.log("-")
+            }
+        });
+        let mul = document.getElementById("Mul")
+        mul.addEventListener("click", () => {
+            if (count == 1) {
+                alert("Only one Operator Allowed");
+
+            }
+            else {
+                count = 1;
+                op = 3;
+                output.innerText = "*";
+                console.log("*}")
+            }
+
+        });
+        let dev = document.getElementById("Dev")
+        dev.addEventListener("click", () => {
+            if (count == 1) {
+                alert("Only one Operator Allowed");
+            }
+            else {
+                count = 1;
+                op = 4;
+                output.innerText = "/";
+                console.log("/")
+            }
+        });
+
+        let clere = document.getElementById("clere")
+        clere.addEventListener("click", () => {
+            Result = 0;
+            val1 = 0;
+            val2 = 0;
+            op = 0;
+            count = 0;
+            output.innerText = Result;
+        });
+
+
+        let cal = document.getElementById("cal")
+        cal.addEventListener("click", () => {
+            switch (op) {
+                case 1: Result = val1 + val2;
+                    output.innerText = Result;
+                    console.log(Result)
+                    break;
+                case 2: Result = val1 - val2;
+                    output.innerText = Result;
+                    console.log(Result)
+                    break;
+                case 3: Result = val1 * val2;
+                    output.innerText = Result;
+                    console.log(Result)
+                    break;
+                case 4: Result = val1 / val2;
+                    output.innerText = Result;
+                    console.log(Result)
+                    break;
+                default: alert("Operator Compulsory \n please try again")
+                         output.innerText = Result;
+                         console.log("Operator Compulsory")
+            }
+            Result = 0;
+            val1 = 0;
+            val2 = 0;
+            op = 0;
+            count = 0;
+        });
+
+
+        // output.innerText = 0;
+        // console.log(output)
+    </script>
+
+</body>
+
+</html>
